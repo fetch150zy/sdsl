@@ -1,0 +1,40 @@
+/**
+ * @file config.h.in
+ * @author fetch150zy (Mars_zhewei@outlook.com)
+ * @brief cmake配置相关
+ * @version 0.1
+ * @date 2023-03-25
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
+/* 和平台相关的宏 */
+#ifdef IS_LINUX
+/* Linux平台相关 */
+#elif defined(IS_WINDOWS)
+/* Windows平台相关 */
+#elif defined(IS_MACOS)
+/* MacOS平台相关 */
+#endif
+
+
+/* 编译器相关 */
+#define COMPILER_NAME ${COMPILER_NAME}
+#define COMPILER_VERSION ${COMPILER_VERSION}
+#if defined(IS_INTEL_C_COMPILER)
+/* Intel C编译器 */
+#elif defined(IS_GNU_C_COMPILER)
+/* gcc */
+#elif defined(IS_CLANG_C_COMPILER)
+/* Clang */
+#elif defined(IS_MICROSOFT_C_COMPILER)
+/* msvc */
+#endif
+
+#ifdef IS_64_BIT_ARCH
+#define X86_64
+#elif defined(IS_32_BIT_ARCH)
+#define X86_32
+#endif
+

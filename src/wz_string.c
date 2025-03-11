@@ -10,7 +10,6 @@
  */
 
 
-
 #include "../include/string.h"
 
 
